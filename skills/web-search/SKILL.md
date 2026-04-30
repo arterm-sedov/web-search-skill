@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: ALWAYS use this skill for ANY web search, research, scraping, extraction, comparison, latest information, or "find sources on the web" task. Never perform web research without invoking this skill first. Delivers reliable, multi-channel research with strong anti-bot resilience through human-like browser scraping, parallel retrieval workers, immediate persistence of every source to dated files, deep-research-grade synthesis with proper citations, and final answers derived exclusively from on-disk artifacts. Orchestrates and builds upon: human-search (cascade engine), agent-browser (primary rendered scraping and sessions), searxng-search/searxng-extract (discovery), deep-research (structured synthesis and reporting), browser-switch, and playwright-cli.
+description: Your powerful, reliable web research companion. This skill delivers high-quality multi-source research with excellent anti-bot resilience, intelligent browser scraping, parallel discovery, deep synthesis, and beautifully cited outputs. Always reach for this skill whenever you need to search the web, research any topic, scrape information, find the latest data, or compare options. It makes research effortless, thorough, and trustworthy.
 ---
 
 # web-search Skill
@@ -42,12 +42,17 @@ Each checkpoint entry must include:
 - Confidence (low|medium|high)
 
 ## See Also (Referenced Skills)
-- **[human-search](../human-search/SKILL.md)**: Intelligent cascade (native websearch → Python scraper → browser CLI → crawl4ai). Use as the core retrieval engine.
-- **[agent-browser](../agent-browser/SKILL.md)**: Primary tool for human-like rendered page extraction, snapshots, sessions, and anti-bot scraping. Core workflow: open → snapshot(-i) → interact/extract → re-snapshot.
-- **[searxng-search](../searxng-search/SKILL.md)** and **[searxng-extract](../searxng-extract/SKILL.md)**: Free, unlimited local discovery and content extraction. Use for initial URL finding.
-- **[deep-research](../deep-research/SKILL.md)**: Structured synthesis, citation management, and professional report formatting. Use for final synthesis phase.
-- **[browser-switch](../browser-switch/skills/browser-switch/SKILL.md)**: Helps select optimal browser automation approach.
-- **[playwright-cli](../playwright-cli/SKILL.md)**: Alternative/backup browser automation when needed.
+
+All referenced skills are available on GitHub. Install any missing ones by copying the skill folder into your agent's skills directory.
+
+- **[human-search](https://github.com/arterm-sedov/human-search-skill)**: Intelligent cascade engine (native → Python scraper → browser CLI → crawl4ai). Core retrieval fallback chain.
+- **[agent-browser](https://github.com/vercel-labs/agent-browser)**: Primary human-like browser scraping tool. Follow `open → snapshot -i → extract → re-snapshot` pattern. Strongest anti-bot resilience.
+- **[searxng-search](https://github.com/arterm-sedov/searxng-agent-skills)** + **[searxng-extract](https://github.com/arterm-sedov/searxng-agent-skills)**: Free, unlimited local search and extraction (no API keys). Excellent for discovery phase.
+- **[deep-research](https://github.com/arterm-sedov/deep-research)**: High-quality synthesis, citations, structured reporting, and progressive disclosure. Use for final synthesis.
+- **[browser-switch](https://github.com/arterm-sedov/browser-switch)**: Selects optimal browser automation backend.
+- **[playwright-cli](https://github.com/microsoft/playwright-cli)**: Strong alternative browser automation tool.
+
+**Tip**: After installing missing skills, restart your agent session so they are discovered. Update the GitHub username/organization in the links above when you publish the repositories.
 
 ## Workflow Checklist
 - [ ] Receive research query
@@ -60,7 +65,7 @@ Each checkpoint entry must include:
 - [ ] Verify all artifacts exist on disk before concluding
 
 ## Examples
-See `examples.md` for concrete parallel Task usage and `reference.md` for full checkpoint template.
+See `references/examples.md` for concrete parallel Task usage and `references/reference.md` for full checkpoint template.
 
 ## Integration with AGENTS.md
 This skill is the canonical implementation of the **Web Research Policy** section in AGENTS.md. All agents should route web research through this skill to ensure consistency, persistence, and quality.

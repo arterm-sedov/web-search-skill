@@ -1,49 +1,45 @@
 # web-search Skill
 
-Global skill for enforced, high-quality web research across all agents (Cursor, Codex, OpenCode).
+**Your powerful and reliable web research assistant.**
 
-## Purpose
-This skill ensures all web research follows strict best practices:
-- Browser-first human-like scraping (anti-bot)
-- Parallel multi-channel retrieval
-- Immediate persistence after every source
-- Synthesis from disk artifacts only
-- Proper citations via deep-research patterns
+This skill transforms how you gather information from the internet. It combines the best tools to deliver:
+
+- **Human-like browsing** that avoids bot blocks
+- **Parallel research** from multiple sources at once
+- **Automatic saving** of every finding with proper citations
+- **Deep, well-structured synthesis** with beautiful citations
+- **Trustworthy outputs** based on real persisted data, not just memory
+
+Research becomes effortless, thorough, and professional.
+
+## How to Use It
+
+Simply ask any research question in natural language:
+
+- "Research the current state of AI coding agents in 2026"
+- "Compare the top options for autonomous agents"
+- "What are the latest developments in LangChain?"
+- "Find recent papers about multi-agent systems"
+
+The skill will automatically activate, run parallel searches, scrape relevant pages in a human-like way, save everything durably, and return a well-cited, high-quality summary.
 
 ## Installation
-```bash
-# Global install (recommended)
-cp -r "D:\Repo\web-search" "$HOME/.agents/skills/web-search"
 
-# Or for Cursor specifically
-cp -r "D:\Repo\web-search" "$HOME/.cursor/skills/web-search"
+Copy the skill folder into your agent's skills directory:
+
+```bash
+cp -r web-search ~/.agents/skills/web-search
 ```
 
-After installation, the skill will be automatically discovered by agents when they see research-related queries.
+Then restart your agent or reload skills.
 
-## Usage
-Simply ask any research question. The skill will trigger automatically due to its strong description.
+## Recommended Supporting Skills
 
-Example:
-> Research the latest developments in LangChain agents in 2026.
+This skill works even better when these are also installed:
+- [human-search](https://github.com/arterm-sedov/human-search-skill) — intelligent retrieval cascade
+- [agent-browser](https://github.com/vercel-labs/agent-browser) — best anti-bot browser scraping
+- [searxng-agent-skills](https://github.com/arterm-sedov/searxng-agent-skills) — fast local discovery
+- [deep-research](https://github.com/arterm-sedov/deep-research) — excellent synthesis and reporting
+- [browser-switch](https://github.com/arterm-sedov/browser-switch) — smart browser selection
 
-The skill will:
-1. Create dated research folder
-2. Launch parallel workers
-3. Persist every source immediately
-4. Synthesize from disk with citations
-
-## Referenced Skills
-- `human-search` - cascade engine
-- `agent-browser` - primary scraping
-- `searxng-search` / `searxng-extract` - discovery
-- `deep-research` - synthesis and reporting
-- `browser-switch` - browser selection
-
-See `SKILL.md` for full agent instructions and `reference.md` for templates.
-
-## Publishing
-This repository is designed to be published to GitHub. Agents can then reference it via marketplace tools if available.
-
-## Compliance
-Fully aligned with the **Web Research Policy** section in `AGENTS.md` (cmw-platform-agent repository).
+Enjoy high-quality, frustration-free web research!

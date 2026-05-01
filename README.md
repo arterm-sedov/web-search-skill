@@ -23,6 +23,13 @@ Simply ask any research question in natural language:
 
 The skill will automatically activate, run parallel searches, scrape relevant pages in a human-like way, save everything durably, and return a well-cited, high-quality summary.
 
+The skill will instruct the agent to:
+
+1. Create a dated research folder
+2. Launch parallel workers
+3. Persist every source immediately
+4. Synthesize from disk with citations
+
 ## Installation
 
 Copy the skill folder into your agent's skills directory:
@@ -35,11 +42,11 @@ Then restart your agent or reload skills.
 
 ## Recommended Supporting Skills
 
-This skill works even better when these are also installed:
-- [human-search](https://github.com/arterm-sedov/human-search-skill) — intelligent retrieval cascade
-- [agent-browser](https://github.com/vercel-labs/agent-browser) — best anti-bot browser scraping
-- [searxng-agent-skills](https://github.com/arterm-sedov/searxng-agent-skills) — fast local discovery
-- [deep-research](https://github.com/arterm-sedov/deep-research) — excellent synthesis and reporting
-- [browser-switch](https://github.com/arterm-sedov/browser-switch) — smart browser selection
+This skill works even better when these referenced skills are also installed:
 
-Enjoy high-quality, frustration-free web research!
+- [agent-browser](https://github.com/vercel-labs/agent-browser) — web scraping via browser
+- [human-search](https://github.com/arterm-sedov/human-search-skill) — cascaded search
+- [deep-research](https://github.com/arterm-sedov/deep-research) — synthesis and reporting
+- [searxng-agent-skills](https://github.com/arterm-sedov/searxng-agent-skills) — search using SearXNG instead of Tavily
+- [browser-switch](https://github.com/arterm-sedov/browser-switch) — browser agent selection
+- [playwright-cli](https://github.com/microsoft/playwright-cli) — browser automation and scraping via the Playwright CLI

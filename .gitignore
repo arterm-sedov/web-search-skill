@@ -1,4 +1,4 @@
 # .gitignore for web-search skill
 node_modules/
 __pycache__/
-*.skill
+.qodo

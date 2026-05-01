@@ -35,10 +35,16 @@ The skill will instruct the agent to:
 Copy the skill folder into your agent's skills directory:
 
 ```bash
-cp -r web-search ~/.agents/skills/web-search
+rm -rf ~/.agents/skills/web-search
+cp -r skills/web-search ~/.agents/skills/web-search
 ```
 
-Then restart your agent or reload skills.
+```powershell
+Remove-Item -Recurse -Force ~/.agents/skills/web-search -ErrorAction SilentlyContinue
+Copy-Item -Recurse skills\web-search ~/.agents/skills/web-search
+```
+
+Restart the agent or reload skills for the new skill discovery.
 
 ## Recommended Supporting Skills
 

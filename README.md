@@ -35,8 +35,8 @@ The skill will instruct the agent to:
 1. Clone and enter this repository:
 
 ```bash
-git clone https://github.com/arterm-sedov/web-search.git
-cd web-search
+git clone https://github.com/arterm-sedov/web-search-skill.git
+cd web-search-skill
 ```
 
 2. Copy the skill folder into your agent's skills directory:

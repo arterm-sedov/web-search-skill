@@ -32,7 +32,14 @@ The skill will instruct the agent to:
 
 ## Installation
 
-Copy the skill folder into your agent's skills directory:
+1. Clone and enter this repository:
+
+```bash
+git clone https://github.com/arterm-sedov/web-search.git
+cd web-search
+```
+
+2. Copy the skill folder into your agent's skills directory:
 
 ```bash
 rm -rf ~/.agents/skills/web-search

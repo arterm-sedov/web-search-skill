@@ -34,7 +34,7 @@ The skill will instruct the agent to:
 
 ### With the `skills` CLI (recommended)
 
-Uses the [Vercel Labs `skills` CLI](https://www.npmjs.com/package/skills) (`npx`; Node.js 18+). You can add `-g` for a global install and `-a <agent>` to target a specific agent (see the CLI docs).
+Uses the [Vercel Labs `skills` CLI](https://www.npmjs.com/package/skills). Add `-g` for a global install. Add `-a <agent-name>` to target a specific agent.
 
 ```bash
 npx skills add arterm-sedov/web-search-skill --skill web-search

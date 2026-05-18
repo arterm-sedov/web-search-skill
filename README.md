@@ -63,6 +63,8 @@ Copy-Item -Recurse skills\web-search ~/.agents/skills/web-search
 
 Restart the agent or reload skills for the new skill discovery.
 
+For semi-interactive automated setup of this skill pack and related dependencies, give [INSTALLER_PROMPT.md](INSTALLER_PROMPT.md) to OpenCode, Cursor, Codex, Claude Code, or another coding agent.
+
 ## Recommended Supporting Skills
 
 This skill works even better when these referenced skills are also installed:

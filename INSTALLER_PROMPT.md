@@ -14,7 +14,7 @@ If cloning repositories is needed, ask the user where repository checkouts shoul
 Source repositories and install targets:
 ```text
 Source repository                                Copy from repo         Install to selected root
-https://github.com/arterm-sedov/web-search      skills/web-search      <install-root>/web-search
+https://github.com/arterm-sedov/web-search-skill      skills/web-search      <install-root>/web-search
 https://github.com/arterm-sedov/human-search-skill    skills/human-search    <install-root>/human-search
 https://github.com/arterm-sedov/deep-research         skills/deep-research   <install-root>/deep-research
 https://github.com/arterm-sedov/browser-switch-skill  skills/browser-switch  <install-root>/browser-switch
@@ -90,7 +90,7 @@ Install command-line dependencies:
 Preferred skill installation:
 Try the skills CLI first when it is available:
 ```sh
-npx skills add arterm-sedov/web-search --skill web-search
+npx skills add arterm-sedov/web-search-skill --skill web-search
 npx skills add arterm-sedov/human-search-skill --skill human-search
 npx skills add arterm-sedov/deep-research --skill deep-research
 npx skills add arterm-sedov/browser-switch-skill --skill browser-switch
@@ -105,7 +105,7 @@ For any failed CLI install, clone the repository into the user-selected checkout
 
 Skill directory mapping:
 ```text
-https://github.com/arterm-sedov/web-search            -> skills/web-search       -> <install-root>/web-search
+https://github.com/arterm-sedov/web-search-skill      -> skills/web-search       -> <install-root>/web-search
 https://github.com/arterm-sedov/human-search-skill    -> skills/human-search     -> <install-root>/human-search
 https://github.com/arterm-sedov/deep-research         -> skills/deep-research    -> <install-root>/deep-research
 https://github.com/arterm-sedov/browser-switch-skill  -> skills/browser-switch   -> <install-root>/browser-switch

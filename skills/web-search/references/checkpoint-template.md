@@ -4,7 +4,7 @@
 
 ## Persistence Rules
 
-- Path pattern: `docs/research/YYYYMMDD/{research_topic_slug}/` — topic lives in `{research_topic_slug}`; phase files are fixed names (e.g. `10_discovery.md`, `20_sources.md`; see `SKILL.md`).
+- Path pattern: `{research_root}/YYYYMMDD/{research_topic_slug}/`, where `{research_root}` is project-scoped or explicitly chosen by the user; never mix unrelated projects. Phase files use fixed names (e.g. `10_discovery.md`, `20_sources.md`; see `SKILL.md`).
 - Write **immediately** after each source fetch; do not continue until the checkpoint is appended.
 - On failure: retry once, then append to `findings_fallback.md` in the same folder (or equivalent fallback named in session notes).
 

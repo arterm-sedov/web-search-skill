@@ -27,11 +27,11 @@ Never perform web research using only transient memory or single-channel tools.
    - **Discovery**: Prefer `searxng-search` / `searxng-extract` when installed; otherwise native web search, web fetch, Tavily, exa, or other available discovery tools.
    - **Scraping**: `agent-browser` (human-like navigation + snapshots); `human-search` cascade as fallback.
    - **Synthesis**: `deep-research` patterns toward `90_synthesis.md`.
-   - **One topic per research subagent**: When the user asks about **multiple distinct subjects**, spawn **separate subagents** so each worker owns **one topic only** — each with its own `docs/research/YYYYMMDD/{research_topic_slug}/` folder. Do **not** assign unrelated questions to the same research subagent (avoids cross-contaminated context, checkpoints, and citations).
+   - **One topic per research subagent**: When the user asks about **multiple distinct subjects**, spawn **separate subagents** so each worker owns **one topic only** — each with its own `{research_root}/YYYYMMDD/{research_topic_slug}/` folder. Do **not** assign unrelated questions to the same research subagent (avoids cross-contaminated context, checkpoints, and citations).
 
 3. **Immediate Persistence**: After **every single source** (search result, URL extracted, page rendered), append a structured checkpoint to the numbered artifact for that phase (e.g. `10_discovery.md`, `20_sources.md`). Do not proceed to the next source until the checkpoint is written. Required fields, example block, and persistence edge cases → `references/checkpoint-template.md`.
 
-4. **Dated Artifact Convention**: Use `docs/research/YYYYMMDD/{research_topic_slug}/` — for example `docs/research/20260430/ai_coding_agents/`. The **research topic** is carried by `{research_topic_slug}`, not baked into repeated strings inside filenames. Under that folder reuse the **same phase filenames** every time so layouts stay predictable. Typical files:
+4. **Project-Scoped Artifact Convention**: Set `{research_root}` to the active project's `docs/research/` by default, or to a storage location explicitly designated by the user. Never place unrelated projects in one shared research folder. If no active project or approved storage location is clear, ask before writing. Under `{research_root}/YYYYMMDD/{research_topic_slug}/`, reuse the same phase filenames every time so layouts stay predictable. Typical files:
 
    - `00_plan.md`
    - `10_discovery.md`
@@ -48,7 +48,7 @@ Never perform web research using only transient memory or single-channel tools.
 Operational order for a research run. Tool install and orchestration roles → See also — referenced skills; checkpoint layout and fields → `references/checkpoint-template.md`:
 
 - [ ] Receive research query
-- [ ] Partition **distinct topics** → one `{research_topic_slug}` folder each under `docs/research/YYYYMMDD/`
+- [ ] Select a project-scoped `{research_root}` and partition **distinct topics** → one `{research_topic_slug}` folder each under `{research_root}/YYYYMMDD/`
 - [ ] Launch parallel subagents (Task tool): **one subagent per topic** for research workers; within each topic, parallelize by role (discovery / scraping / synthesis) as needed
 - [ ] Instruct each parallel subagent to use the referenced web-scraping and research skills and to save dated research files and checkpoints after each finding to avoid losing context. Each subagent should follow this skill’s rules.
 - [ ] After each source fetch: immediately append checkpoint
